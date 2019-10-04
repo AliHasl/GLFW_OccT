@@ -70,9 +70,19 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>F:\GLFWforOCCT\lib\glfw-3.3.bin.WIN64\lib-vc2019;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)lib\glfw-3.3.bin.WIN64\lib-vc2019;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)lib\glfw-3.3.bin.WIN64\include;$(SolutionDir)lib\STB;$(SolutionDir)lib\GLM;$(SolutionDir)lib\glew-2.0.0\include;$(SolutionDir)lib\GLAD\include;%(AdditionalIncludeDirectories);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>$(SolutionDir)lib\glfw-3.3.bin.WIN64\lib-vc2019;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)lib\glfw-3.3.bin.WIN64\include;$(SolutionDir)lib\STB;$(SolutionDir)lib\GLM;$(SolutionDir)lib\glew-2.0.0\include;$(SolutionDir)lib\GLAD\include;%(AdditionalIncludeDirectories);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)lib\glfw-3.3.bin.WIN64\include;$(SolutionDir)lib\STB;$(SolutionDir)lib\GLM;$(SolutionDir)lib\glew-2.0.0\include;$(SolutionDir)lib\GLAD\include;%(AdditionalIncludeDirectories);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(SolutionDir)lib\glfw-3.3.bin.WIN64\lib-vc2019;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)lib\glfw-3.3.bin.WIN64\include;$(SolutionDir)lib\STB;$(SolutionDir)lib\GLM;$(SolutionDir)lib\glew-2.0.0\include;$(SolutionDir)lib\GLAD\include;%(AdditionalIncludeDirectories);$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>$(SolutionDir)lib\glfw-3.3.bin.WIN64\lib-vc2019;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -81,12 +91,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>F:\GLFWforOCCT\lib\glfw-3.3.bin.WIN64\include;$(SolutionDir)..\lib\STB;$(SolutionDir)..\lib\GLM;$(SolutionDir)..\lib\glew-2.0.0\include;$(SolutionDir)..\lib\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\OpenCascadeInstall\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;TKernel.lib;TKMath.lib;TKG2d.lib;TKG3d.lib;TKXSBase.lib;TKIGES.lib;TKGeomBase.lib;TKBRep.lib;TKGeomAlgo.lib;TKTopAlgo.lib;TKBO.lib;TKPrim.lib;TKBool.lib;TKShHealing.lib;TKMesh.lib;TKFillet.lib;TKHLR.lib;TKFeat.lib;TKXMesh.lib;TKOffset.lib;TKService.lib;TKV3d.lib;TKMeshVS.lib;TKOpenGl.lib;TKSTL.lib;TKSTEP.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:\OpenCascadeInstall\win64\vc14\libd;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -95,11 +105,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib\glfw-3.3.bin.WIN64\include;$(SolutionDir)lib\STB;$(SolutionDir)lib\GLM;$(SolutionDir)lib\glew-2.0.0\include;$(SolutionDir)lib\GLAD\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\OpenCascadeInstall\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;TKernel.lib;TKMath.lib;TKG2d.lib;TKG3d.lib;TKXSBase.lib;TKIGES.lib;TKGeomBase.lib;TKBRep.lib;TKGeomAlgo.lib;TKTopAlgo.lib;TKBO.lib;TKPrim.lib;TKBool.lib;TKShHealing.lib;TKMesh.lib;TKFillet.lib;TKHLR.lib;TKFeat.lib;TKXMesh.lib;TKOffset.lib;TKService.lib;TKV3d.lib;TKMeshVS.lib;TKOpenGl.lib;TKSTL.lib;TKSTEP.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:\OpenCascadeInstall\win64\vc14\libd;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -110,11 +122,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>F:\OpenCascadeInstall\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;TKernel.lib;TKMath.lib;TKG2d.lib;TKG3d.lib;TKXSBase.lib;TKIGES.lib;TKGeomBase.lib;TKBRep.lib;TKGeomAlgo.lib;TKTopAlgo.lib;TKBO.lib;TKPrim.lib;TKBool.lib;TKShHealing.lib;TKMesh.lib;TKFillet.lib;TKHLR.lib;TKFeat.lib;TKXMesh.lib;TKOffset.lib;TKService.lib;TKV3d.lib;TKMeshVS.lib;TKOpenGl.lib;TKSTL.lib;TKSTEP.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:\OpenCascadeInstall\win64\vc14\libd;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -125,19 +140,28 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>F:\OpenCascadeInstall\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;TKernel.lib;TKMath.lib;TKG2d.lib;TKG3d.lib;TKXSBase.lib;TKIGES.lib;TKGeomBase.lib;TKBRep.lib;TKGeomAlgo.lib;TKTopAlgo.lib;TKBO.lib;TKPrim.lib;TKBool.lib;TKShHealing.lib;TKMesh.lib;TKFillet.lib;TKHLR.lib;TKFeat.lib;TKXMesh.lib;TKOffset.lib;TKService.lib;TKV3d.lib;TKMeshVS.lib;TKOpenGl.lib;TKSTL.lib;TKSTEP.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:\OpenCascadeInstall\win64\vc14\libd;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\lib\GLAD\src\glad.c" />
+    <ClCompile Include="..\lib\GLAD\src\glad.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
