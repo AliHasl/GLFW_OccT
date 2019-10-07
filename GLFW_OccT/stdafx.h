@@ -1,7 +1,13 @@
 #pragma once
+#define GLFW_EXPOSE_NATIVE_WIN32
 
-#include <glad/glad.h>
+//#include <glad/glad.h>
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <GLFW/glfw3native.h>
+
+#include <windows.h>
+#include <wingdi.h>
 
 
 #include <iostream>
@@ -57,7 +63,7 @@
 //#include <Graphic3d_Array1OfVertex.hxx>
 #include <Graphic3d_ArrayOfPolylines.hxx>
 //#include <Graphic3d.hxx>
-//#include <OpenGl_GraphicDriver.hxx>		//Replace Graphic3d.hxx by OpenGl_GraphicDriver.hxx
+#include <OpenGl_GraphicDriver.hxx>		//Replace Graphic3d.hxx by OpenGl_GraphicDriver.hxx
 #include <Graphic3d_GraphicDriver.hxx>
 #include <Graphic3d_ExportFormat.hxx>
 #include <Graphic3d_ArrayOfPolylines.hxx>
@@ -168,3 +174,6 @@
 #include <math.hxx>
 #include <TopTools_ListOfShape.hxx>
 #include <TopTools_ListIteratorOfListOfShape.hxx>
+
+#include <Aspect_NeutralWindow.hxx>
+
